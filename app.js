@@ -21,7 +21,7 @@ app.listen(3000, function() {
 });
 
 app.get("/", (req, res) => {
-  res.render("home.ejs", {homeStartingContent: homeStartingContent});
+  res.render("home.ejs", {homeStartingContent: homeStartingContent, posts: posts});
 })
 
 app.get("/about", (req, res) => {
