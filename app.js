@@ -20,7 +20,7 @@ app.listen(3000, function () {
 });
 
 app.get("/", (req, res) => {
-    res.render("home.ejs", {homeStartingContent: homeStartingContent, posts: posts});
+    res.render("home.ejs", {homeStartingContent: homeStartingContent, posts: posts, _: _});
 })
 
 app.get("/about", (req, res) => {
