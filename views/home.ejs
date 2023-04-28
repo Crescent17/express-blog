@@ -12,9 +12,11 @@
 <h1>Home</h1>
 <p><%= homeStartingContent %></p>
 <% posts.forEach(post => { %>
-    <h1><%= post.title %></h1>
-    <p><%= post.body.substring(0, 100) %>...</p>
-    <a href="/posts/<%= _.kebabCase(post.title) %>"><button type="button">Read More</button></a>
+    <form action="/" method="post">
+        <h1><%= post.title %></h1>
+            <p><%= post.body.substring(0, 100) %>...</p>
+            <button value="<%= post._id %>" name="postId" class="btn btn-info">Open</button>
+    </form>
 <% }) %>
 </body>
 <%- include('partials/footer'); -%>
